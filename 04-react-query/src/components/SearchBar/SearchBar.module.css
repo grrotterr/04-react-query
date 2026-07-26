@@ -1,0 +1,29 @@
+.header {
+  background: #222;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+}
+
+.input {
+  padding: 8px;
+}
+
+.button {
+  padding: 8px 16px;
+  cursor: pointer;
+}

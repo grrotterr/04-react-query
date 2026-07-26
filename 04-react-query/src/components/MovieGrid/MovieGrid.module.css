@@ -1,0 +1,20 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 20px;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 18px;
+}
