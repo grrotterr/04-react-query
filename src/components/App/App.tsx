@@ -10,7 +10,7 @@ import css from "./App.module.css";
 
 import SearchBar from "../SearchBar/SearchBar";
 import Loader from "../Loader/Loader";
-import ErrorMessage from "../ErrorMessage/ErorrMessage";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import MovieGrid from "../MovieGrid/MovieGrid";
 import MovieModal from "../MovieModal/MovieModal";
 
@@ -38,14 +38,15 @@ export default function App() {
 
 
   const {
-    data,
-    isLoading,
-    isError,
-  } = useQuery({
-    queryKey: ["movies", query, page],
-    queryFn: () => fetchMovies(query, page),
-    enabled: Boolean(query),
-  });
+  data,
+  isLoading,
+  isError,
+} = useQuery({
+  queryKey: ["movies", query, page],
+  queryFn: () => fetchMovies(query, page),
+  enabled: Boolean(query),
+  placeholderData: (previousData) => previousData,
+});
 
 
   const movies = useMemo(
